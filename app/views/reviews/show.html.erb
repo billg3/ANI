@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Stars:</strong>
+  <%= @review.stars %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @review.user_id %>
+</p>
+
+<p>
+  <strong>Anime:</strong>
+  <%= @review.anime_id %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @review.comment %>
+</p>
+
+<%= link_to 'Edit', edit_review_path(@review) %> |
+<%= link_to 'Back', reviews_path %>
