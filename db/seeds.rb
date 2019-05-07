@@ -46,7 +46,7 @@ end
   Anime.create(title: "bleach", episode: 4, season: 2, summary: "dead alive idk ", img_url: "nil")
   Anime.create(title: "dbz", episode: 5, season: 3, summary: "it's over 9000!", img_url: "nil")
   Anime.create(title: "naruto", episode: 6, season: 1, summary: "overcomes the obstacle through love ather than hate", img_url: "nil")
-  Anime.create(title: "sword art online", episode: 7, season: 2, summary: "", img_url: "nil")
+  Anime.create(title: "sword art online", episode: 7, season: 2, summary: "virtual sword people", img_url: "nil")
   Anime.create(title: "cowboy bebop", episode: 8, season: 3, summary: "see you next time cowboy", img_url: "nil")
   Anime.create(title: "death note", episode: 9, season: 1, summary: " supernatutal notebook with no happy ending ", img_url: "nil")
   Anime.create(title: "ergo proxy", episode: 10, season: 2, summary: "cogito ergo sum", img_url: "nil")
@@ -54,3 +54,12 @@ end
   Anime.create(title: "boruto", episode: 12, season: 1, summary: "naruto and sasuke raise a child", img_url: "nil")
   Anime.create(title: "pokemon", episode: 12, season: 2, summary: "to be the very best", img_url: "nil")
   Anime.create(title: "fullmetal alchemist", episode: 14, season: 3, summary: "a hell of a show", img_url: "nil")
+  Anime.create(title: "neon genesis evangelion", episode: 15, season: 1, summary: "weir", img_url: "nil")
+
+
+
+Review.create(stars: 3, user_id: 2, anime_id: 6, comment: "cool")
+Review.create(stars: 3, user_id: 3, anime_id: 5, comment: "cool")
+Review.create(stars: 3, user_id: 4, anime_id: 4, comment: "cool")
+Review.create(stars: 3, user_id: 5, anime_id: 3, comment: "cool")
+Review.create(stars: 3, user_id: 6, anime_id: 2, comment: "cool")
