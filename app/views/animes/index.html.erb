@@ -21,7 +21,7 @@
         <td><%= anime.episode %></td>
         <td><%= anime.season %></td>
         <td><%= anime.summary %></td>
-        <td><%= anime.img_url %></td>
+        <td><img src=<%= anime.img_url %> alt=""></td>
         <td><%= link_to 'Show', anime %></td>
         <td><%= link_to 'Edit', edit_anime_path(anime) %></td>
         <td><%= link_to 'Destroy', anime, method: :delete, data: { confirm: 'Are you sure?' } %></td>
