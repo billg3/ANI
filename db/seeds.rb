@@ -1,38 +1,7 @@
+Anime.destroy_all
+Review.destroy_all
+User.destroy_all
 
-require 'unirest'
-
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-
-  #make the web request
-# def api
-#   data = JSON.parse(RestClient.get('https://anilist.co/search/anime'))
-# end
-
-#
-# response = Unirest.post “https://Anilistmikilior1V1.p.rapidapi.com/createAnimeListEntry“,
-#  headers:{
-#    “X-RapidAPI-Host” => “Anilistmikilior1V1.p.rapidapi.com”,
-#    “X-RapidAPI-Key” => “4bb91dacc1mshbe6c51b6318f85dp129908jsn8190ef478cf7",
-#    “Content-Type” => “application/x-www-form-urlencoded”
-#  }
-#
-
-
-
-#
-#
-# a = User.create(name:"jerry", email:"jerry@jmail.com", password_digest: "nil")
-#
-# b = Anime.create(title: "one punch man", episode: 3, season: 1, summary: "overcomes the obstacle", img_url: "nil")
-#
-# c = Review.create(stars: 4, user_id: 1, anime_id: 1)
 
 10.times do
 
@@ -42,7 +11,7 @@ end
 
 
 
-  Anime.create(title: "one punch man", episode: 3, season: 1, summary: "man punches big", img_url: "https://m.media-amazon.com/images/M/MV5BMzQxMzE5NzM2NV5BMl5BanBnXkFtZTgwMDQ4NTUyNzE@._V1_SY1000_CR0,0,693,1000_AL_.jpg")
+  Anime.create(title: "one punch man", episode: 3, season: 1, summary: "man punches big", img_url: "https://m.media-amazon.com/images/M/MV5BMzQxMzE5NzM2NV5BMl5BanBnXkFtZTgwMDQ4NTUyNzE@._V1_.jpg")
   Anime.create(title: "bleach", episode: 4, season: 2, summary: "dead alive idk ", img_url: "https://m.media-amazon.com/images/M/MV5BZjE0YjVjODQtZGY2NS00MDcyLThhMDAtZGQwMTZiOWNmNjRiXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UX182_CR0,0,182,268_AL_.jpg")
   Anime.create(title: "dbz", episode: 5, season: 3, summary: "it's over 9000!", img_url: "https://m.media-amazon.com/images/M/MV5BNGM5MTEyZDItZWNhOS00NzNkLTgwZTAtNWIzY2IzZmExOWMxXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UX32_CR0,0,32,44_AL_.jpg")
   Anime.create(title: "naruto", episode: 6, season: 1, summary: "overcomes the obstacle through love ather than hate", img_url: "https://m.media-amazon.com/images/M/MV5BZmQ5NGFiNWEtMmMyMC00MDdiLTg4YjktOGY5Yzc2MDUxMTE1XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UY268_CR0,0,182,268_AL_.jpg")

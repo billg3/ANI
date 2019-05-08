@@ -17,10 +17,11 @@
  body {
    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/151c3942-2b50-4812-9b48-154e6b0f599b/d5l75aj-6d34730c-aa0c-42bb-8618-2cea7d4ae8a1.png/v1/fill/w_878,h_910,strp/monkey_d_luffy_render_9_by_roronoaroel_d5l75aj-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjY4NCIsInBhdGgiOiJcL2ZcLzE1MWMzOTQyLTJiNTAtNDgxMi05YjQ4LTE1NGU2YjBmNTk5YlwvZDVsNzVhai02ZDM0NzMwYy1hYTBjLTQyYmItODYxOC0yY2VhN2Q0YWU4YTEucG5nIiwid2lkdGgiOiI8PTI1ODkifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.txmtFRLyj4DzIeh3srF7paETT84fK7k0ei7BZTbWTxg);
    background-size:contain;
-   bac
+
+   background-color: black;
 
  }
-  img {
-     max-width:100%;
-     height:auto;
- }
+ img.resize {
+   width:540px; /* you can use % */
+   height: auto;
+}

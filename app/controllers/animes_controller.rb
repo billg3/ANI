@@ -1,28 +1,21 @@
 class AnimesController < ApplicationController
   before_action :set_anime, only: [:show, :edit, :update, :destroy]
 
-  # GET /animes
-  # GET /animes.json
   def index
     @animes = Anime.all
   end
 
-  # GET /animes/1
-  # GET /animes/1.json
+
   def show
   end
 
-  # GET /animes/new
   def new
     @anime = Anime.new
   end
 
-  # GET /animes/1/edit
   def edit
   end
 
-  # POST /animes
-  # POST /animes.json
   def create
     @anime = Anime.new(anime_params)
 
@@ -37,8 +30,6 @@ class AnimesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /animes/1
-  # PATCH/PUT /animes/1.json
   def update
     respond_to do |format|
       if @anime.update(anime_params)
@@ -51,8 +42,6 @@ class AnimesController < ApplicationController
     end
   end
 
-  # DELETE /animes/1
-  # DELETE /animes/1.json
   def destroy
     @anime.destroy
     respond_to do |format|

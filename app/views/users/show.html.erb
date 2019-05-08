@@ -1,13 +1,25 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <h2><strong>Name:</strong></h2>
   <%= @user.name %>
 </p>
 
 <p>
-  <strong>Email:</strong>
+    <h2><strong>Email:</strong></h2>
   <%= @user.email %>
+</p>
+
+<p>
+  <strong>Reviews:</strong>
+  <ul>
+      <% @user.reviews.each do |review| %>
+    <li>
+      <%= link_to review.comment, review %>
+    </li>
+  </ul>
+  <% end %>
+
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
