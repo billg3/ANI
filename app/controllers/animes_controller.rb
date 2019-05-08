@@ -1,19 +1,12 @@
 class AnimesController < ApplicationController
-  before_action :set_anime, only: [:show, :edit, :update, :destroy]
+  before_action :set_anime, only: [:show, :edit, :new, :update, :destroy]
 
   def index
     @animes = Anime.all
   end
 
-
-  def show
-  end
-
   def new
     @anime = Anime.new
-  end
-
-  def edit
   end
 
   def create
