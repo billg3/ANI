@@ -1,3 +1,18 @@
 <p id=”notice”><%= notice %></p>
-<h1>Example</h1>
-<p>Lorem ipsum …</p>
+<h1>Welcome to ANI</h1>
+<%= link_to "Sign-In", logins_path %>
+<%= link_to "Sign-Up", new_user_path %>
+<hr>
+
+<iframe src="" width="500" height="400"></iframe>
+<hr>
+<h2>List of anime</h2>
+<ol>
+  <% @anime.each do |ani| %>
+  <li>
+    <h3><%= link_to ani.title, ani %></h3>
+    <p><%= ani.summary %></p>
+    <img src=<%= ani.img_url %>>
+   </li>
+  <% end %>
+</ol>
