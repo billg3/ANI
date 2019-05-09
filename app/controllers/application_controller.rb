@@ -1,17 +1,41 @@
 class ApplicationController < ActionController::Base
-  helper_method :current_user
+  skip_before_action :verify_authenticity_token
 
-    def current_user
-      if session[:user_id]
-        @current_user ||= User.find(session[:user_id])
-      else
-        @current_user = nil
-      end
+  before_action :setup
+  before_action :current_user
+
+  def current_user
+    @user = (User.find_by(id: session[:user_id])|| User.new)
+  end
+
+  def get_notification
+    flash["message"]
+  end
+
+  def set_notification(message)
+    flash["message"] = message
+  end
+
+  private
+
+  def log_in_user(user_id)
+  session[:user_id] = user_id
+  end
+
+  def log_out_user
+    session[:user_id] = nil
+  end
+
+  def setup
+
+    @logged_in = !!session[:user_id]
+    if @logged_in
+      @logged_in_user_id = session[:user_id]
+      @logged_in_user = User.find(@logged_in_user_id)
+      # @remaining_votes = @logged_in_user.remaining_votes
+      # @can_vote = @logged_in_user.can_vote
     end
 
-    private
-    
-  def logged_in
-    !!session[:user_id]
+    @notification = get_notification
   end
 end

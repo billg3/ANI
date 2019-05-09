@@ -5,10 +5,10 @@ class LoginController < ApplicationController
   end
 
   def create
-   @user = User.find_by(username: params[:name])
+   @user = User.find_by(email: params[:email])
    if @user && @user.authenticate(params[:password])
      log_in_user(@user.id)
-     redirect_to anime_path
+     redirect_to root_path
    else
      flash[:errors] = [ "User doesn't exist or invalid password" ]
      redirect_to new_login_path
@@ -17,7 +17,7 @@ class LoginController < ApplicationController
 
   def destroy
    log_out_user
-   redirect_to home_path
+   redirect_to root_path
   end
 
 end

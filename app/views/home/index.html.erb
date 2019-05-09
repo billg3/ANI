@@ -1,21 +1,26 @@
 <p id=”notice”><%= notice %></p>
 <h1 class="header">Welcome to ANI</h1>
+<br>
+<h2>Welcome<%= @user.name %></h2>
+<%= button_to "Log out", log_out_path, method: :delete %>
+<hr>
 <div class="logs">
-  <%= link_to "Sign-In", new_login_path %>
+  <%= link_to "Log-In", new_login_path %>
   <%= link_to "Sign-Up", new_user_path %>
 </div>
 <div class="user_welcome">
 </div>
-
-<hr>
+<br>
 
 <iframe width="600" height="480" src="https://www.youtube.com/embed/tqqusEyL76M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <div class="feature">
-<h3>Popular anime</h3>
-
+<h3 id="pop">Popular anime</h3>
+  <ol>
+    <li></li>
+  </ol>
 </div>
 <hr>
-<h2>List of anime</h2>
+<h2 id="list">List of anime</h2>
 <ol>
   <% @anime.each do |ani| %>
   <li>

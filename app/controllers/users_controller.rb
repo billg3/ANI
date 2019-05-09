@@ -17,7 +17,7 @@ class UsersController < ApplicationController
 
     if @user.valid?
       log_in_user(@user.id)
-      redirect_to colors_path
+      redirect_to root_path
     else
       @errors = @user.errors.full_messages
       render :new
@@ -37,8 +37,7 @@ class UsersController < ApplicationController
     end
   end
 
-  # DELETE /users/1
-  # DELETE /users/1.json
+
   def destroy
     @user.destroy
     respond_to do |format|
