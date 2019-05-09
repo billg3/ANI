@@ -1,15 +1,17 @@
 <p id=”notice”><%= notice %></p>
 <h1 class="header">Welcome to ANI</h1>
-<br>
-<h2>Welcome<%= @user.name %></h2>
+<div class="user_welcome">
+  <h2>Welcome<%= link_to @user.name, user_path(@user) %></h2>
+</div>
+<div class="button">
 <%= button_to "Log out", log_out_path, method: :delete %>
+</div>
 <hr>
 <div class="logs">
   <%= link_to "Log-In", new_login_path %>
   <%= link_to "Sign-Up", new_user_path %>
 </div>
-<div class="user_welcome">
-</div>
+
 <br>
 
 <iframe width="600" height="480" src="https://www.youtube.com/embed/tqqusEyL76M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -16,6 +16,8 @@
       <% @user.reviews.each do |review| %>
     <li>
       <%= link_to review.comment, review %>
+      <%= button_to "Edit Comment", edit_review_path %>
+      <%= button_to "Delete Comment", destroy_review_path %>
     </li>
   </ul>
   <% end %>
@@ -23,4 +25,4 @@
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Back', root_path %>
