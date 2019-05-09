@@ -3,7 +3,23 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
- img {
-    max-width:100%;
-    height:auto;
+body {
+  text-decoration: none;
+}
+h1.header {
+  font-size: 10em;
+  font-weight: 600;
+  font-style: oblique;
+}
+h2 {
+  color: white;
+}
+a {
+  font-size: 3em;
+  position: center;
+}
+div.feature{
+  font-size: 4em;
+   float: right;
+   position: relative;
 }

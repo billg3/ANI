@@ -1,5 +1,5 @@
 class Login < ApplicationRecord
-  
+
 
 
 end

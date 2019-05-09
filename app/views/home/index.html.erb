@@ -1,17 +1,28 @@
 <p id=”notice”><%= notice %></p>
-<h1>Welcome to ANI</h1>
-<%= link_to "Sign-In", logins_path %>
-<%= link_to "Sign-Up", new_user_path %>
+<h1 class="header">Welcome to ANI</h1>
+<div class="logs">
+  <%= link_to "Sign-In", new_login_path %>
+  <%= link_to "Sign-Up", new_user_path %>
+</div>
+<div class="user_welcome">
+</div>
+
 <hr>
 
 <iframe width="600" height="480" src="https://www.youtube.com/embed/tqqusEyL76M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="feature">
+<h3>Popular anime</h3>
+
+</div>
+<hr>
 <h2>List of anime</h2>
 <ol>
   <% @anime.each do |ani| %>
   <li>
-    <h3><%= link_to ani.title, ani %></h3>
-    <p><%= ani.summary %></p>
     <img src=<%= ani.img_url %>>
+    <h4><%= link_to ani.title, ani %></h4>
+    <p><%= ani.summary %></p>
+
    </li>
   <% end %>
 </ol>
